@@ -1,5 +1,6 @@
 package com.crossover.techtrial.service;
 
+import com.crossover.techtrial.exceptions.PanelNotFoundException;
 import com.crossover.techtrial.model.Panel;
 
 /**
@@ -16,5 +17,6 @@ public interface PanelService {
   
   void register(Panel panel);
   
-  Panel findBySerial(String serial);
+  Panel findBySerial(String serial) throws PanelNotFoundException;
+  
 }
